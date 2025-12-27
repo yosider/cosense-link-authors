@@ -1,0 +1,25 @@
+{
+  "imports": {
+    "@cosense/types": "jsr:@cosense/types@^0.11",
+    "@std/assert": "jsr:@std/assert@^1"
+  },
+  "tasks": {
+    "test": "deno test --allow-read",
+    "test:coverage": "deno test --allow-read --coverage=coverage && deno coverage coverage",
+    "test:coverage:html": "deno test --allow-read --coverage=coverage && deno coverage coverage --html && echo 'Open coverage/html/index.html in your browser'",
+    "build": "deno run -A npm:esbuild mod.ts --bundle --format=iife --outfile=dist/script.js"
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 120,
+    "indentWidth": 2,
+    "semiColons": true
+  },
+  "lint": {
+    "rules": {
+      "tags": [
+        "recommended"
+      ]
+    }
+  }
+}
