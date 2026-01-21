@@ -40,6 +40,13 @@ Deno.test("区切り文字: 改行", () => {
   );
 });
 
+Deno.test("区切り文字: 中点 (∙)", () => {
+  assertEquals(
+    linkAuthors("Alice Smith ∙ Bob Johnson"),
+    "[Alice Smith], [Bob Johnson]",
+  );
+});
+
 Deno.test("区切り文字: 複数種類の混在", () => {
   assertEquals(
     linkAuthors(

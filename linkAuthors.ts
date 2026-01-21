@@ -12,7 +12,7 @@
  */
 
 // 区切り文字のパターン
-const SEPARATORS = /[,&;]|\band\b|\n/gi;
+const SEPARATORS = /[,&;∙]|\band\b|\n/gi;
 
 // 分割前に削除するパターン（区切り文字と重複する文字を含む）
 const REMOVE_BEFORE_SPLIT = /Author Info & Affiliations/gi;
